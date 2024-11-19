@@ -33,7 +33,7 @@ Node* search_node(LinkedList* list, void* value) {
 
 void remove_node(LinkedList* list, void* value) {
     Node* target;
-    if (list->first->value == &value) {
+    if (list->first->value == value) {
         target = list->first;
         list->first = list->first->next;
         list->size-=1;
@@ -42,7 +42,10 @@ void remove_node(LinkedList* list, void* value) {
     }
     Node* previous = list->first;
     target = previous->next;
-    while(target->value != &value) {
+    while(target->value != value) {
+        if (target->next == NULL) {
+            return;
+        }
         previous = target;
         target = target->next;
     }
