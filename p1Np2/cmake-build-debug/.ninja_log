@@ -1,0 +1,12 @@
+# ninja log v6
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/mergeSort/main.c.o	cdb8bdde13fa93b7
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/birthYear/main.c.o	367dddeb70655738
+2	59	1730151344653406380	CMakeFiles/algprog2.dir/athletes/main.c.o	8b41074f46a2c76c
+1	22	1730151352466683790	CMakeFiles/algprog2.dir/binary_search.c.o	c249a0d7320f9fe7
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/productTax/main.c.o	2acc683ba2b9d3bd
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/biggestFromRangeRead/main.c.o	6f1d7d65b95244b0
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/totalUniqueValuesInVec/main.c.o	54ea4df03ce49bd9
+1	58	1730151344653406380	CMakeFiles/algprog2.dir/studentScoreMatrix/main.c.o	acdcfd5b87f9a634
+2	59	1730151344653406380	CMakeFiles/algprog2.dir/rectangle/main.c.o	9edf043095f99f96
+2	58	1730151344653406380	CMakeFiles/algprog2.dir/studentScoreMatrix/sonnetExample.c.o	9fba3946ba2feb34
+3	59	1730151344653406380	CMakeFiles/algprog2.dir/pointersArray/main.c.o	68da3330bfe44e24
