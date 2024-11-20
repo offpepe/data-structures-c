@@ -8,7 +8,7 @@ void verify_linked_list_integrity(LinkedList* list, const int* values) {
     if (list == NULL) return;
     printf("Verificando tamanho da lista após inserção: ");
     if (list->size != VALUES_SIZE) {
-        printf("\nErro ao inserir no ínicio da lista encadeada");
+        printf("\nErro ao inserir no ínicio da lista encadeada\n");
         return;
     }
     printf("OK\n");
@@ -16,7 +16,7 @@ void verify_linked_list_integrity(LinkedList* list, const int* values) {
     printf("Verificando integridade da lista encadeada: ");
     for (int i = VALUES_SIZE - 1; i >= 0; i--) {
         if ((int*)node->value != (int*) values[i]) {
-            printf("\nErro durante verificação de integridade da lista encadeada");
+            printf("\nErro durante verificação de integridade da lista encadeada\n");
             return;
         }
         node = node->next;
@@ -26,7 +26,7 @@ void verify_linked_list_integrity(LinkedList* list, const int* values) {
     for (int i = VALUES_SIZE - 1; i >= 0; i--) {
         node = search_node(list, (void*) values[i]);
         if ((int*)node->value != (int*) values[i]) {
-            printf("\nErro durante verificação de integridade da busca em lista encadeada");
+            printf("\nErro durante verificação de integridade da busca em lista encadeada\n");
             return;
         }
     }
@@ -35,11 +35,11 @@ void verify_linked_list_integrity(LinkedList* list, const int* values) {
     for (int i = 0; i < VALUES_SIZE; i++) {
         remove_node(list, (void*) values[i]);
         if (search_node(list, (void*) values[i]) != NULL) {
-            printf("\nErro ao remover nó");
+            printf("\nErro ao remover nó\n");
             return;
         }
     }
-    if (list->size > 0) printf("\nErro ao limpar lista");
+    if (list->size > 0) printf("\nErro ao limpar lista\n");
     printf("OK\n");
 }
 
