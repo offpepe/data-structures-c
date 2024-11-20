@@ -16,9 +16,9 @@ typedef struct {
 } DoubleLinkedList;
 
 
-void insert_start(DoubleLinkedList* list, void* value);
-void insert_end(DoubleLinkedList* list, void* value);
-DNode* search_node(DoubleLinkedList* list, void* value);
-void remove_node(DoubleLinkedList* list, void* value);
+void d_insert_start(DoubleLinkedList* list, void* value);
+void d_insert_end(DoubleLinkedList* list, void* value);
+DNode* d_search_node(DoubleLinkedList* list, void* value);
+void d_remove_node(DoubleLinkedList* list, void* value);
 
 #endif

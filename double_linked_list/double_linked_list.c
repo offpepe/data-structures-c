@@ -1,7 +1,7 @@
 #include "double_linked_list/double_linked_list.h"
 #include "stdlib.h"
 
-void insert_start(DoubleLinkedList *list, void *value)
+void d_insert_start(DoubleLinkedList *list, void *value)
 {
     DNode *node = malloc(sizeof(DNode));
     node->value = value;
@@ -25,7 +25,7 @@ void insert_start(DoubleLinkedList *list, void *value)
     list->size += 1;
 }
 
-void insert_end(DoubleLinkedList *list, void *value)
+void d_insert_end(DoubleLinkedList *list, void *value)
 {
     DNode *node = malloc(sizeof(DNode));
     node->value = value;
@@ -49,7 +49,7 @@ void insert_end(DoubleLinkedList *list, void *value)
     list->size += 1;
 }
 
-DNode* search_node(DoubleLinkedList* list, void* value) {
+DNode* d_search_node(DoubleLinkedList* list, void* value) {
     if (list->first == NULL) return NULL;
     DNode* right = list->first;
     DNode* left = list->last;
@@ -63,10 +63,10 @@ DNode* search_node(DoubleLinkedList* list, void* value) {
     return NULL;
 }
 
-void remove_node(DoubleLinkedList* list, void* value) {
-    DNode* target = search_node(list, value);
+void d_remove_node(DoubleLinkedList* list, void* value) {
+    DNode* target = d_search_node(list, value);
     if (target->next == NULL) {
-        list->last = target->previous;
+        list->last = target->previous != list->first ? target->previous : NULL;
         list->size -= 1;
     } else if (target->previous == NULL) {
         target->next->previous = NULL;
