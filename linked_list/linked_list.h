@@ -1,12 +1,12 @@
 #ifndef LINKED_LIST
 #define LINKED_LIST
 
-#define NULL (void*)0
+typedef struct Node Node;
 
-typedef struct {
+struct Node {
 	Node* next;
 	void* value;
-} Node;
+};
 
 typedef struct {
 	Node* first;
@@ -15,8 +15,8 @@ typedef struct {
 } LinkedList;
 
 
-void insert_start(LinkedList* list, Node* node);
-void insert_end(LinkedList* list, Node* node);
+void insert_start(LinkedList* list, void* value);
+void insert_end(LinkedList* list, void* value);
 Node* search_node(LinkedList* list, void* value);
 void remove_node(LinkedList* list, void* value);
 
